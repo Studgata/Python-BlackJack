@@ -1,31 +1,51 @@
 import random
-list=["spades","hearts","diamond","clubs"]
+list=[1,2,3,4,5,6,7,8,9,10,11,12,13,14]
+list2=['heart','spade','club','diamond']
 def card1():
+    y=random.randint(1,14)
+    z=random.randint(0,3)
 
-    for x in range(1):
-      y=random.randint(1,11)
-      if y == 1 or y == 11:
-          print("if you want the Ace as 1 or 11")
-          y = int(input("."))
+    cardval=list[y]
+    ty=list2[z]
+    if cardval==11:
+        denom='J'
 
-    for x in range (1):
-      y1=random.randint(0,3)
-      z=list[y1]
-    return ("%s %s"%(y,z))
+    elif cardval==12:
+        denom='Q'
+    elif cardval==13:
+        denom='K'
+
+    elif cardval==14:
+        denom='A'
+
+    else:
+        denom="%s"%(list[y])
+
+    print("card 1:  %s %s"%(ty,denom))
 
 def card2():
-    for x in range(1):
-        y = random.randint(1, 11)
-        if y==1 or y==11:
-            print("if you want the Ace as 1 or 11")
-            y=int(input("."))
-    for x in range(1):
-        y1 = random.randint(0, 3)
-        z = list[y1]
-    return ("%s %s" % (y, z))
+    y = random.randint(0, 13)
+    z = random.randint(0, 3)
+
+    cardval = list[y]
+    ty = list2[z]
+    if cardval == 11:
+        denom = 'J'
+
+    elif cardval == 12:
+        denom = 'Q'
+    elif cardval == 13:
+        denom = 'K'
+
+    elif cardval == 14:
+        denom = 'A'
+
+    else:
+        denom = "%s" % (list[y])
+
+    print("card 2:  %s %s" % (ty, denom))
 
 
-c1=card1()
-c2=card2()
 
-print(c1,c2)
+card2()
+card1()
