@@ -2,7 +2,7 @@ import random
 list=[1,2,3,4,5,6,7,8,9,10,11,12,13,14]
 list2=['heart','spade','club','diamond']
 def card1():
-    y=random.randint(1,14)
+    y=random.randint(0,13)
     z=random.randint(0,3)
 
     cardval=list[y]
